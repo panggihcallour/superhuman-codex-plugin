@@ -76,3 +76,18 @@ In a Codex chat:
 
 Verify it's connected: paste a task link and ask Codex to `get_task <link>` — it should return
 the task's title and status.
+
+## Notes & troubleshooting
+
+- **Listing shows `ops-agent`, not "Ops Agent", before install.** Normal for a GitHub-hosted
+  (cross-repo) plugin — Codex shows the raw id + "install to view more". The display name
+  **"Ops Agent" appears once installed.**
+- **Icon shows a generic puzzle.** Codex's custom-plugin-icon support is limited; the manifest's
+  `composerIcon` may not override it. Not fixable from the plugin side.
+- **Marketplace source is `git-subdir`.** A `local` source fails to load
+  (`path does not exist or is not a directory`) via the GitHub flow — don't switch it.
+- **Updates are NOT automatic.** After a new release, run `codex plugin marketplace upgrade callour`.
+  (Maintainer bumps `version` in plugin.json each release.)
+- **Sparse paths:** `.agents/plugins` is enough.
+- **"MCP not available in this thread"?** Codex loads MCP at startup — fully quit + reopen Codex,
+  then start a new chat. Use an interactive chat (not an Automation, which is sandboxed/no network).
