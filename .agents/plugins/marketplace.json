@@ -5,11 +5,11 @@
   },
   "plugins": [
     {
-      "name": "superhuman-ops",
+      "name": "ops-agent",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/panggihcallour/superhuman-codex-plugin.git",
-        "path": "./plugins/superhuman-ops",
+        "path": "./plugins/ops-agent",
         "ref": "main"
       },
       "policy": {

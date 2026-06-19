@@ -1,4 +1,4 @@
-# Superhuman Ops — Codex plugin
+# Ops Agent — Codex plugin
 
 A Codex plugin for [Callour Studio](https://callourstudio.com) that connects Codex to the
 **Superhuman Operations** MCP (tasks, projects, workload, documents) and installs two task
@@ -23,14 +23,14 @@ You need a **Superhuman MCP token** — ask the founder (minted at `/account/mcp
    - Source: `panggihcallour/superhuman-codex-plugin`
    - Git ref: `main`
    - Sparse paths: `.agents/plugins`
-2. Find **Superhuman Ops** in the plugin list → **Add**.
+2. Find **Ops Agent** in the plugin list → **Add**.
 3. Set your token (below).
 4. **Restart Codex.**
 
 ### From the CLI
 ```
 codex plugin marketplace add panggihcallour/superhuman-codex-plugin
-codex plugin add superhuman-ops@callour
+codex plugin add ops-agent@callour
 ```
 Then set your token and restart Codex.
 

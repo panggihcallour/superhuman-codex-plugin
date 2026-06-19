@@ -1,5 +1,5 @@
 {
-  "name": "superhuman-ops",
+  "name": "ops-agent",
   "version": "0.1.0",
   "description": "Connects Codex to the Superhuman Operations MCP (tasks, projects, workload, documents) and installs the start-task / post-comment task workflow skills.",
   "author": {
@@ -9,7 +9,7 @@
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Superhuman Ops",
+    "displayName": "Ops Agent",
     "shortDescription": "Operations tasks + the start/post task workflow.",
     "longDescription": "Connects Codex to the Superhuman Operations MCP and installs the start-task and post-comment skills. Operational surface only — no finance, sales, or people money. Requires a SUPERHUMAN_MCP_TOKEN env var (ask the founder for a token).",
     "developerName": "Callour Studio",
