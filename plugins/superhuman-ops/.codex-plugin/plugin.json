@@ -1,0 +1,24 @@
+{
+  "name": "superhuman-ops",
+  "version": "0.1.0",
+  "description": "Connects Codex to the Superhuman Operations MCP (tasks, projects, workload, documents) and installs the start-task / post-comment task workflow skills.",
+  "author": {
+    "name": "Callour Studio"
+  },
+  "repository": "https://github.com/panggihcallour/superhuman-codex-plugin",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Superhuman Ops",
+    "shortDescription": "Operations tasks + the start/post task workflow.",
+    "longDescription": "Connects Codex to the Superhuman Operations MCP and installs the start-task and post-comment skills. Operational surface only — no finance, sales, or people money. Requires a SUPERHUMAN_MCP_TOKEN env var (ask the founder for a token).",
+    "developerName": "Callour Studio",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "defaultPrompt": [
+      "Start task <paste a task link> and walk me through it.",
+      "Summarise this task and post the result for review.",
+      "What's overdue across projects this week?"
+    ]
+  }
+}

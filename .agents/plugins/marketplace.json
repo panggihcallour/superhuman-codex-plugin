@@ -1,0 +1,22 @@
+{
+  "name": "callour",
+  "interface": {
+    "displayName": "Callour"
+  },
+  "plugins": [
+    {
+      "name": "superhuman-ops",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/panggihcallour/superhuman-codex-plugin.git",
+        "path": "./plugins/superhuman-ops",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
