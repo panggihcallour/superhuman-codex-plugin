@@ -22,7 +22,7 @@ You need a **Superhuman MCP token** — ask the founder (minted at `/account/mcp
 1. **Plugins → Add marketplace.**
    - Source: `panggihcallour/superhuman-codex-plugin`
    - Git ref: `main`
-   - Sparse paths: `.agents/plugins`
+   - Sparse paths (one per line): `.agents/plugins` then `plugins/ops-agent`
 2. Find **Ops Agent** in the plugin list → **Add**.
 3. Set your token (below).
 4. **Restart Codex.**

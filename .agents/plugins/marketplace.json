@@ -7,10 +7,8 @@
     {
       "name": "ops-agent",
       "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/panggihcallour/superhuman-codex-plugin.git",
-        "path": "./plugins/ops-agent",
-        "ref": "main"
+        "source": "local",
+        "path": "./plugins/ops-agent"
       },
       "policy": {
         "installation": "AVAILABLE",
