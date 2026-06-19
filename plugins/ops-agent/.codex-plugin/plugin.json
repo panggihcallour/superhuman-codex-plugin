@@ -15,8 +15,6 @@
     "developerName": "Callour Studio",
     "category": "Productivity",
     "capabilities": ["Interactive", "Write"],
-    "composerIcon": "./assets/logo.png",
-    "logo": "./assets/logo.png",
     "defaultPrompt": [
       "Start task <paste a task link> and walk me through it.",
       "Summarise this task and post the result for review.",
