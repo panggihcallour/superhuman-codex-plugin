@@ -1,0 +1,26 @@
+{
+  "name": "design-agent",
+  "version": "0.2.0",
+  "description": "Design Agent for Callour Studio. Connects Codex to the Superhuman Operations MCP and runs the task workflow (start-task, post-comment) plus senior UX design production (information-architecture, wireframe).",
+  "author": {
+    "name": "Callour Studio"
+  },
+  "repository": "https://github.com/panggihcallour/superhuman-codex-plugin",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Design Agent",
+    "shortDescription": "Senior UX design workflow on Superhuman tasks.",
+    "longDescription": "A Design Agent for Callour Studio. Connects to the Superhuman Operations MCP and adds skills to run a task (start-task, post-comment) and produce senior-grade UX deliverables (information-architecture, wireframe). Acts as a Senior Principal UX Designer. Operational surface only — no finance, sales, or people money. Requires a SUPERHUMAN_MCP_TOKEN env var (ask the founder for a token).",
+    "developerName": "Callour Studio",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png",
+    "defaultPrompt": [
+      "Start task <paste a task link> and walk me through it.",
+      "Build the information architecture for this task.",
+      "Wireframe the key screens for this task."
+    ]
+  }
+}

@@ -1,13 +1,15 @@
-# Ops Agent — Codex plugin
+# Design Agent — Codex plugin
 
-A Codex plugin for [Callour Studio](https://callourstudio.com) that connects Codex to the
-**Superhuman Operations** MCP (tasks, projects, workload, documents) and installs two task
-skills: `start-task` and `post-comment`.
+A **Design Agent** plugin for [Callour Studio](https://callourstudio.com). It connects Codex to
+the **Superhuman Operations** MCP (tasks, projects, workload, documents) and adds skills to run a
+task and produce senior UX design deliverables — acting as a **Senior Principal UX Designer**.
 
 It bundles:
 - the `superhuman_operations` MCP server (auto-registered on install)
-- the `start-task` skill — read a task, flip it to in-progress, give an active kickoff
-- the `post-comment` skill — summarise the work and post it back to the task
+- `start-task` — read a task, flip it to in-progress, give an active kickoff
+- `information-architecture` — content inventory, sitemap, navigation, user flows
+- `wireframe` — low-fi grayscale wireframes of the key screens, annotated with states
+- `post-comment` — summarise the work and post the deliverable back to the task
 
 > **Operational surface only.** This connects to the Operations MCP — tasks, projects,
 > workload, documents. It exposes **no finance, sales, or people data / money** (the token is
@@ -23,14 +25,14 @@ You need a **Superhuman MCP token** — ask the founder (minted at `/account/mcp
    - Source: `panggihcallour/superhuman-codex-plugin`
    - Git ref: `main`
    - Sparse paths: `.agents/plugins`
-2. Find **Ops Agent** in the plugin list → **Add**.
+2. Find **Design Agent** in the plugin list → **Add**.
 3. Set your token (below).
 4. **Restart Codex.**
 
 ### From the CLI
 ```
 codex plugin marketplace add panggihcallour/superhuman-codex-plugin
-codex plugin add ops-agent@callour
+codex plugin add design-agent@callour
 ```
 Then set your token and restart Codex.
 
@@ -79,9 +81,9 @@ the task's title and status.
 
 ## Notes & troubleshooting
 
-- **Listing shows `ops-agent`, not "Ops Agent", before install.** Normal for a GitHub-hosted
+- **Listing shows `design-agent`, not "Design Agent", before install.** Normal for a GitHub-hosted
   (cross-repo) plugin — Codex shows the raw id + "install to view more". The display name
-  **"Ops Agent" appears once installed.**
+  **"Design Agent" appears once installed.**
 - **Icon shows a generic puzzle.** Codex's custom-plugin-icon support is limited; the manifest's
   `composerIcon` may not override it. Not fixable from the plugin side.
 - **Marketplace source is `git-subdir`.** A `local` source fails to load
