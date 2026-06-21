@@ -15,6 +15,10 @@ Design WORK — runs after `/logo-design` + `/moodboard`, before `/marketing-ass
 
 The logo (`/logo-design`), art direction (`/moodboard`), and strategy (`/brand-strategy`). Build the system to express all three consistently.
 
+## Codex-only image generation
+
+When running in Codex and the identity system needs bitmap examples — photography direction, illustration style samples, texture/pattern studies, product mockups, or applied scene mockups — load/use the system `imagegen` skill. Prefer built-in `image_gen`; keep generated images as examples unless the task explicitly asks for final raster assets. Do not use `imagegen` for tokens, type scales, vector motifs, icon systems, or final logo files.
+
 ## Method (in order)
 
 1. **Color.** A purposeful palette — primary, secondary, neutrals, functional accents — with roles (where each is used), real values, and **contrast checked** for legible pairings (accessibility, not just aesthetics).

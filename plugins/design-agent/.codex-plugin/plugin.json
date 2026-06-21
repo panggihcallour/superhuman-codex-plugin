@@ -1,6 +1,6 @@
 {
   "name": "superhuman-agent",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "description": "Superhuman Agent for Callour Studio — one plugin, five live senior specialists: Product, Design, Graphic, Dev, and Research. Connects Codex to the Superhuman Operations MCP; start-task reads and claims a task, brings in the right specialist, and conducts the work to create-report.",
   "author": {
     "name": "Callour Studio"

@@ -27,4 +27,23 @@ fi
 python3 -m json.tool "$PLUGIN_DIR/.codex-plugin/plugin.json" >/dev/null
 python3 -m json.tool "$PLUGIN_DIR/.mcp.json" >/dev/null
 
+GRAPHIC_SKILLS=(
+  brand-strategy
+  moodboard
+  logo-design
+  brand-identity
+  marketing-assets
+  brand-guidelines
+  asset-handoff
+  graphic-critique
+)
+
+for skill in "${GRAPHIC_SKILLS[@]}"; do
+  skill_file="$PLUGIN_DIR/skills/$skill/SKILL.md"
+  if ! rg -q '^## Codex-only image generation$' "$skill_file"; then
+    echo "error: missing Codex-only image generation section in $skill_file" >&2
+    exit 1
+  fi
+done
+
 echo "OK"

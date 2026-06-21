@@ -15,6 +15,10 @@ Design WORK — a QA gate after graphic work exists, before `/create-report`. In
 
 The brand strategy/concept it should express (`/brand-strategy`) and the work itself (HTML/SVG in chat, or a Figma file — use the Figma MCP to see it precisely). You critique against the concept + brand, so anchor on those first.
 
+## Codex-only image generation
+
+Critique does not generate new visuals by default. If the Codex user asks for revised bitmap alternatives, example fixes, or generated reference variants after the critique, load/use the system `imagegen` skill and keep the generated images separate from the critique findings. Do not use `imagegen` for vector logo corrections or deterministic layout fixes.
+
 ## Method (in order)
 
 1. **Restate the concept + brand.** What the work should express (personality, message) — the yardstick.

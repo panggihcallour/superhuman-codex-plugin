@@ -15,6 +15,10 @@ Design WORK — runs after `/brand-strategy`, before `/logo-design` + `/brand-id
 
 The brand strategy (`/brand-strategy`) — personality, archetype, audience. Any references/guidelines from the project (`read_project_resource`). If no strategy exists, establish the intended feeling first.
 
+## Codex-only image generation
+
+When running in Codex and the moodboard needs new raster visuals — photography references, illustration samples, textures, product/lifestyle scenes, or visual variants from references — load/use the system `imagegen` skill. Prefer the built-in `image_gen` mode, issue one generation per distinct asset/direction, and save any project-bound selected images into the workspace before handing off. Do not use `imagegen` for simple swatches, typography specimens, SVG marks, or HTML/CSS-only placeholders.
+
 ## Method (in order)
 
 1. **Translate strategy → feeling.** One or two lines: the mood the visuals must evoke (e.g. "warm, crafted, confident — not corporate"), traced to the personality/archetype.

@@ -15,6 +15,10 @@ Design WORK — runs after `/brand-identity` (or against an existing brand), bef
 
 The brand identity (`/brand-identity`) or existing brand assets (`read_project_resource`), the campaign brief (message, audience, goal, channels), and any copy (or pair with `/ux-writing`).
 
+## Codex-only image generation
+
+When running in Codex and the campaign needs raster creative — ad images, social post backgrounds, product/lifestyle scenes, product mockups, banner imagery, or image variants — load/use the system `imagegen` skill. Prefer built-in `image_gen`, create one generation per distinct asset or variant, preserve exact campaign copy separately in the layout when text accuracy matters, and save final project-bound images into the workspace before `/create-report`. Do not use `imagegen` for purely typographic/layout templates that are better built in HTML/CSS/Figma.
+
 ## Method (in order)
 
 1. **Campaign frame.** The single message, the audience, the action you want, and the channels/formats needed — one line.

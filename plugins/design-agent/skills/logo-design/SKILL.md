@@ -15,6 +15,10 @@ Design WORK — runs after `/brand-strategy` + `/moodboard`, before `/brand-iden
 
 The brand strategy (personality, archetype, positioning) + the art direction (`/moodboard`). If those don't exist, anchor the logo to at least a stated concept + feeling.
 
+## Codex-only image generation
+
+Final logo work should stay vector-native: SVG, Figma vectors, or editable geometry. Do not use `imagegen` for the final logo, final lockups, or production marks. In Codex, use the system `imagegen` skill only for exploratory raster mood sketches, product/application mockups, or reference imagery when that materially helps evaluate a concept; label those outputs as non-final references.
+
 ## Method (in order)
 
 1. **Concept first.** The single idea the mark expresses (drawn from the pillars/archetype) — say it in a sentence before drawing. No idea, no logo.

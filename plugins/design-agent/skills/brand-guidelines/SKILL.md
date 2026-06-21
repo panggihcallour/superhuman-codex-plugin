@@ -15,6 +15,10 @@ Design WORK — runs late, after `/brand-identity`, before `/create-report`. Inh
 
 The full identity system (`/brand-identity`), logo (`/logo-design`), art direction (`/moodboard`), and strategy (`/brand-strategy`).
 
+## Codex-only image generation
+
+When running in Codex and the guidelines need missing raster examples — do/don't imagery, illustration usage, texture examples, or application mockups — load/use the system `imagegen` skill. Prefer real approved assets first; generated examples must be labelled as illustrative examples unless the task explicitly approves them as final assets. Do not use `imagegen` to recreate vector logos, icons, or deterministic layout specimens.
+
 ## Method (in order)
 
 1. **Brand essence (brief).** Positioning, personality, and the one-line "what we stand for" — so users design *with intent*, not just to-spec.
