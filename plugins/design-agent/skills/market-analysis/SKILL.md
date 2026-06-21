@@ -9,7 +9,7 @@ metadata:
 
 Map the market the product plays in. **Act as a Senior UX & Market Researcher.** Distinct from a UX competitor teardown (`/competitive-audit`): this is the business landscape — size, trends, segments, where the opportunity is. Inherits the **principal-grade standard** — evidence over opinion, cite sources.
 
-Runs early (after `/start-task`), before `/create-report`. Uses **`WebSearch`/`WebFetch`** for sourcing. Work in chat; nothing posts until approved.
+Runs early (after `/start-task`), before `/create-report`. Uses the available web research tools for sourcing. Work in chat; nothing posts until approved.
 
 ## Method (in order)
 1. **Scope the market.** Define the market/category precisely (whose problem, what alternatives count).

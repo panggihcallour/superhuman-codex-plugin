@@ -13,7 +13,7 @@ Design WORK — a QA gate that runs **after a design exists** and before **`/cre
 
 ## Inputs
 
-The brief + success criteria (`get_task` + resources) — you critique *against the goal*, not in a vacuum. The design itself: an HTML/visual deliverable in chat, or a Figma file (use `figma_take_screenshot` / `figma_get_file_data` to see it precisely).
+The brief + success criteria (`get_task` + resources) — you critique *against the goal*, not in a vacuum. The design itself: an HTML/visual deliverable in chat, or a Figma file (use `get_screenshot` / `get_design_context` to see it precisely).
 
 ## Method (in order)
 

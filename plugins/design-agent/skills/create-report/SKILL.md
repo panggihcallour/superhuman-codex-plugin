@@ -30,7 +30,7 @@ Tools (Superhuman Operations MCP): `get_task`, `list_agent_queue`, `post_agent_a
    - Figma work → `format: "figma"` + `figma_url`.
    - Image/binary (logo concepts, PDFs) → `prepare_agent_attachment_upload` (per file) → PUT the bytes → `finalize_agent_attachment`. For an HTML doc WITH supporting images, attach images first (`move_to_review: false`), then post the HTML.
 
-5. **Pick the agent slug** matching the work: `des` (design / art direction), `graphic`, `research`, `strategic`, `developer`. Default to the task's `assigned_agent`. Pass `runner: "claude"` + the `model` id for honest provenance.
+5. **Pick the agent slug** matching the work: `des` (Design Agent / art direction), `graphic` (Graphic Agent), `research` (Research Agent), `strategic` (Product Agent), `developer` (Dev Agent). Default to the task's `assigned_agent`. Pass an honest `runner` for the current environment (for example `"codex"` or `"claude"`) plus the `model` id when known.
 
 6. **Preview, then stop.** Call `post_agent_artifact` (or `finalize_agent_attachment`) WITHOUT `confirm`. Show exactly what will happen: report posted as <agent>, file attached, checklist ticked, status → `client_review`. STOP and ask: **rilis, revisi, atau batal?**
 

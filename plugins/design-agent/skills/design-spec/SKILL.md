@@ -13,7 +13,7 @@ Design WORK — runs late, **after the design exists** and before **`/create-rep
 
 ## Inputs
 
-The brief + the finished design (`/visual-design` and/or `/prototype`), the token set (`/design-tokens`), and any component specs (`/component-spec`). If the design is connected in Figma, read precise values via the Figma MCP (`figma_get_file_data` / `figma_get_component_for_development` / `figma_get_styles`) rather than eyeballing.
+The brief + the finished design (`/visual-design` and/or `/prototype`), the token set (`/design-tokens`), and any component specs (`/component-spec`). If the design is connected in Figma, read precise values via the current Figma MCP (`get_design_context`, `get_metadata`, `get_variable_defs`, `get_screenshot`) rather than eyeballing.
 
 ## Method (in order)
 

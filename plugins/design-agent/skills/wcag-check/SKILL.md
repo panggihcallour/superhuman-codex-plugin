@@ -13,7 +13,7 @@ Design WORK — a QA gate that runs **after a design/build exists** and before *
 
 ## Inputs
 
-The design or built UI under review (HTML deliverable in chat, or a Figma file). For Figma, use `figma_audit_component_accessibility` / `figma_scan_code_accessibility` / `figma_get_styles` to pull real values. For contrast, compute against the actual token colors.
+The design or built UI under review (HTML deliverable in chat, or a Figma file). For Figma, use `get_design_context`, `get_variable_defs`, and `get_screenshot` to pull real values. For contrast, compute against the actual token colors.
 
 ## Method — walk WCAG's four principles (POUR)
 

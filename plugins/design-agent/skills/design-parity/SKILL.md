@@ -13,8 +13,8 @@ Design WORK — runs **last, after something is built**, before **`/create-repor
 
 ## Inputs
 
-- **The design source of truth:** the Figma file (`figma_get_file_data` / `figma_get_styles` / `figma_check_design_parity`) and/or the `/design-spec` + `/design-tokens`.
-- **The built UI:** the live preview. Use the preview tools (`preview_start`, `preview_screenshot`, `preview_snapshot`, `preview_inspect`) to capture the real rendered values, or screenshots the user provides.
+- **The design source of truth:** the Figma file (`get_design_context`, `get_metadata`, `get_variable_defs`, `get_screenshot`) and/or the `/design-spec` + `/design-tokens`.
+- **The built UI:** the live preview. Use the available browser/preview tools to capture screenshots, snapshots, and real rendered values, or screenshots the user provides.
 
 ## Method (in order)
 
@@ -26,7 +26,7 @@ Design WORK — runs **last, after something is built**, before **`/create-repor
    - **Components** — right variant/state; missing affordances.
    - **States** — are empty/loading/error/hover/focus actually implemented, or only the happy path?
    - **Responsive & motion** — breakpoints behave; transitions present and correct.
-3. **Diff precisely.** Use `preview_inspect` (computed CSS) and Figma values so each finding is "design X vs built Y", not a vibe.
+3. **Diff precisely.** Use computed CSS/rendered values and Figma values so each finding is "design X vs built Y", not a vibe.
 4. **Rank.** Blocker (wrong/broken) · Major (visible drift) · Minor (sub-pixel/polish).
 5. **Fix list.** Point each diff at the exact change (token, value, missing state).
 

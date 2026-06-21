@@ -97,6 +97,17 @@ If a `SUPERHUMAN_MCP_TOKEN` line already exists, replace it (don't duplicate). T
 codex plugin marketplace upgrade callour
 ```
 
+## Validate before release
+
+Run the lightweight plugin check before tagging/publishing a new version:
+
+```
+scripts/validate-plugin.sh
+```
+
+It validates the plugin JSON files and fails if stale instructions leak back in, including old
+`post-comment` wording, old Figma MCP tool names, or platform-specific runner/provenance text.
+
 ## Use
 
 In a Codex chat:

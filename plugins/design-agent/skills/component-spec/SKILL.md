@@ -14,7 +14,7 @@ Design WORK — runs **between `/start-task`** and **`/create-report`**, buildin
 ## Inputs
 
 - The brief + the token system (`/design-tokens`) so the spec references tokens, not raw values.
-- **Figma MCP (optional):** if a file is connected, inspect an existing component with `figma_search_components` / `figma_get_component_details` / `figma_analyze_component_set` before specifying. Otherwise specify from scratch.
+- **Figma MCP (optional):** if a file is connected, inspect existing components with `search_design_system`, `get_design_context`, `get_metadata`, and `get_screenshot` before specifying. Otherwise specify from scratch.
 
 ## Method (in order)
 

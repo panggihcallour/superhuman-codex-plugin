@@ -1,7 +1,7 @@
 {
   "name": "superhuman-agent",
-  "version": "0.10.0",
-  "description": "Superhuman Agent for Callour Studio — one plugin, several senior specialists (Design live; Graphic, Dev, Research coming). Connects Codex to the Superhuman Operations MCP; start-task reads a task, brings in the right specialist, and conducts the work to post-comment.",
+  "version": "0.10.1",
+  "description": "Superhuman Agent for Callour Studio — one plugin, five live senior specialists: Product, Design, Graphic, Dev, and Research. Connects Codex to the Superhuman Operations MCP; start-task reads and claims a task, brings in the right specialist, and conducts the work to create-report.",
   "author": {
     "name": "Callour Studio"
   },
@@ -11,7 +11,7 @@
   "interface": {
     "displayName": "Superhuman Agent",
     "shortDescription": "Senior specialist agents for your Superhuman tasks.",
-    "longDescription": "Superhuman Agent is an umbrella of senior specialists that work your Superhuman Operations tasks. Live today: the Design Agent (Senior Principal UX Designer) — research, IA & sitemap, UX writing, wireframes, design system, visual design, prototyping, building in Figma, and design QA. Coming: Graphic (brand & graphic design), Dev (engineering), and Research (UX & market research). One entry, start-task, reads a task, picks the right specialist, and runs the work; post-comment documents it back. Operational surface only — no finance, sales, or people money. Requires a SUPERHUMAN_MCP_TOKEN env var (ask the founder for a token).",
+    "longDescription": "Superhuman Agent is an umbrella of senior specialists that work your Superhuman Operations tasks. Live today: Product (problem framing, PRDs, prioritisation), Design (IA, flows, wireframes, visual design, Figma, design QA), Graphic (brand and marketing systems), Dev (implementation, tests, review), and Research (UX and market research). One entry, start-task, reads and claims a task, picks the right specialist, and runs the work; create-report documents the process and outcome back to the task. Operational surface only — no finance, sales, or people money. Requires a SUPERHUMAN_MCP_TOKEN env var (ask the founder for a token).",
     "developerName": "Callour Studio",
     "category": "Productivity",
     "capabilities": ["Interactive", "Write"],
