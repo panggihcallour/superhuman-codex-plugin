@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "design-agent",
+      "name": "superhuman-agent",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/panggihcallour/superhuman-codex-plugin.git",
