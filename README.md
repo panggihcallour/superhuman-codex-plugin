@@ -45,30 +45,20 @@ Then set your token and restart Codex.
 ## Set your token
 
 **First, get a token — ask the founder.** Callour Studio mints it at `/account/mcp` (the token
-page is founder-only). The plugin reads it from the `SUPERHUMAN_MCP_TOKEN` environment variable,
-which Codex loads from `~/.codex/.env`. Add it one of two ways, then **restart Codex**.
-
-**A) Text editor (easiest):**
+page is founder-only). The plugin reads it from `SUPERHUMAN_MCP_TOKEN`, which Codex loads from
+`~/.codex/.env`. Open that file in a text editor:
 
 ```
 touch ~/.codex/.env && open -e ~/.codex/.env
 ```
 
-TextEdit opens — add this line and save (`Cmd+S`):
+TextEdit opens — add this line (replace `shmcp_xxxx` with your token), then save (`Cmd+S`):
 
 ```
 SUPERHUMAN_MCP_TOKEN=shmcp_xxxx
 ```
 
-**B) One command:**
-
-```
-echo "SUPERHUMAN_MCP_TOKEN=shmcp_xxxx" >> ~/.codex/.env
-```
-
-Replace `shmcp_xxxx` with the token the founder gave you. If a `SUPERHUMAN_MCP_TOKEN` line
-already exists, replace it (don't duplicate). Type the token by hand rather than pasting from
-chat, to avoid stray whitespace.
+If a `SUPERHUMAN_MCP_TOKEN` line already exists, replace it (don't duplicate). Then **restart Codex**.
 
 ## Update
 
