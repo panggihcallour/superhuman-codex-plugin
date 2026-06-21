@@ -15,10 +15,6 @@ Design WORK — runs early in brand work (after `/start-task`, before `/moodboar
 
 The brief (`get_task` + `read_project_resource` for any existing brand/business context, competitors, audience). If the business goal or audience is unclear, ask before strategising.
 
-## Codex-only image generation
-
-Do not use `imagegen` for strategy by default. If the Codex user explicitly asks for quick raster reference images to illustrate a strategic territory, load/use the system `imagegen` skill and keep them clearly labelled as exploratory references, not brand assets.
-
 ## Method (in order)
 
 1. **Frame the problem.** Why this brand exists, the business outcome it must drive, and who it's for — one line each. Understand it, don't assume it.

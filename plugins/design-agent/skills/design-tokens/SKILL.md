@@ -14,7 +14,7 @@ Design WORK — runs **between `/start-task`** and **`/create-report`**, feeding
 ## Inputs
 
 - The brief + any brand visual identity (`get_task`, `read_project_resource` for brand guidelines).
-- **Figma MCP (optional):** if a Figma file is connected, use the current Figma MCP surface to inspect variables/styles first (`get_variable_defs`, `get_metadata`, `get_design_context`, `search_design_system`). Only write to Figma when explicitly requested, and follow the `figma-use` prerequisite before `use_figma`. If no Figma is connected, deliver the token spec as a document.
+- **Figma MCP (optional):** if a Figma file is connected, read what exists with `figma_export_tokens` / `figma_browse_tokens` / `figma_get_token_values` / `figma_get_styles` before defining new ones, and (only on request) write them with `figma_setup_design_tokens` / `figma_create_variable` / `figma_batch_create_variables`. If no Figma is connected, deliver the token spec as a document.
 
 ## Method (in order)
 

@@ -7,24 +7,24 @@ metadata:
 
 # figma-build
 
-Build the design in Figma for real, not just describe it. **Act as a Senior Principal UX Designer.** This skill uses the **Figma MCP** to construct frames, screens, and components on the canvas, apply the token/style system, and verify the result visually.
+Build the design in Figma for real, not just describe it. **Act as a Senior Principal UX Designer.** This skill uses the **Figma Console MCP** to construct frames, screens, and components on the canvas, apply the token/style system, and verify the result visually.
 
 Design WORK — runs **after the design direction is set** (`/visual-design`, `/component-spec`, `/design-tokens`) and before **`/create-report`**. Requires the Figma MCP to be connected; if it isn't, say so and fall back to an HTML build (`/visual-design`).
 
 ## Inputs
 
 - The agreed design: screens from `/visual-design`, component specs from `/component-spec`, tokens from `/design-tokens`.
-- **Figma MCP.** Start every session by identifying the target file/node and reading current structure with `get_metadata`. Search the design system with `search_design_system`; use `get_design_context` and `get_screenshot` to inspect references. Before writing, load the `figma-use` prerequisite and then use `use_figma`. Node IDs are session-specific and go stale across conversations; never reuse old ones blindly.
+- **Figma MCP.** Start every session with `figma_get_status` / `figma_list_open_files` and **`figma_search_components`** — node IDs are session-specific and go stale across conversations; never reuse old ones.
 
 ## Method (follow the MCP's mandatory build → screenshot → analyse → iterate → verify loop)
 
-1. **Orient.** Resolve the file key/node, inspect with `get_metadata`, and check the target page/section. Before creating, check the page/section doesn't already exist (avoid duplicates).
+1. **Orient.** `figma_get_status`, pick the file, and check the current page. Before creating, check the page/section doesn't already exist (avoid duplicates).
 2. **Container first.** Create or find a **Section/Frame** to hold the work — never leave components floating on blank canvas.
-3. **Reuse the system.** Search existing assets with `search_design_system` and import/instantiate existing components in `use_figma` instead of redrawing; apply existing styles/variables/tokens rather than hard-coded values.
-4. **Build with auto layout.** Construct screens/components using auto layout; use "fill container" (not "hug") where elements should stretch; keep padding/gap on the spacing scale. Use `use_figma` for construction.
-5. **Screenshot & analyse.** Use `get_screenshot` after each meaningful step. Check alignment, spacing, proportion, balance, fill-vs-hug, centring, text/inputs filling width.
+3. **Reuse the system.** `figma_search_components` and instantiate existing components (`figma_instantiate_component`) instead of redrawing; apply existing styles/variables/tokens rather than hard-coded values.
+4. **Build with auto layout.** Construct screens/components using auto layout; use "fill container" (not "hug") where elements should stretch; keep padding/gap on the spacing scale. Use `figma_execute` for the construction.
+5. **Screenshot & analyse.** `figma_take_screenshot` after each meaningful step. Check alignment, spacing, proportion, balance, fill-vs-hug, centring, text/inputs filling width.
 6. **Iterate** to fix what the screenshot reveals (max ~3 passes per screen), then **verify** with a final screenshot.
-7. **Audit before handing off.** Re-read with `get_metadata`, `get_design_context`, `get_variable_defs`, and screenshots to catch detached-looking one-offs, off-token values, and naming issues you can fix now (or hand to `/figma-audit`).
+7. **Lint before handing off.** Run `figma_lint_design` / `figma_audit_design_system` to catch detached instances, off-token values, and naming issues you can fix now (or hand to `/figma-audit`).
 
 ## Senior rigor (always)
 

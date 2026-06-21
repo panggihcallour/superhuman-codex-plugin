@@ -14,7 +14,7 @@ Design WORK — runs **between `/start-task`** and **`/create-report`**, early i
 ## Inputs
 
 - The active task's brief: `get_task` (+ `list_agent_queue` / `read_project_resource`) — the problem, users, and what "good" means.
-- Use the available web research tools. Search for the named competitors if the brief lists them; otherwise search for the product category, the specific flow ("X onboarding flow", "X pricing page"), and best-in-class references. Open/read primary pages in depth before making claims. (Do **not** pull from internal Dribbble/Behance — this skill is web-research-driven.)
+- **`WebSearch`** is the research engine. Search for the named competitors if the brief lists them; otherwise search for the product category, the specific flow ("X onboarding flow", "X pricing page"), and best-in-class references. Use `WebFetch` to read a specific page in depth. (Do **not** pull from internal Dribbble/Behance — this skill is web-research-driven.)
 
 ## Method (in order)
 

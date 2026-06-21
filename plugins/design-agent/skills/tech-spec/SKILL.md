@@ -1,6 +1,6 @@
 ---
 name: tech-spec
-description: Use to write a technical design doc / RFC before building — problem, proposed approach, architecture, alternatives and trade-offs, risks, and rollout. Acts as a Senior Software Engineer. Runs at the FRONT of engineering work, after /start-task and before /implementation-plan; BEFORE /create-report. Trigger on "tech spec", "technical design", "rfc", "design doc", "architecture", "spec teknis".
+description: Use to write a technical design doc / RFC before building — problem, proposed approach, architecture, alternatives and trade-offs, risks, and rollout. Acts as a Senior Software Engineer. Runs at the FRONT of engineering work, after /start-task (and a /prd if there is one) and before /implementation-plan; BEFORE /create-report. Trigger on "tech spec", "technical design", "rfc", "design doc", "architecture", "spec teknis".
 metadata:
   short-description: Technical design doc / RFC — approach, architecture, trade-offs, risks
 ---
@@ -9,10 +9,10 @@ metadata:
 
 Design the solution before writing it. **Act as a Senior Software Engineer.** A senior engineer's leverage is in the design: the right approach, the trade-offs named, the risks surfaced — so the build is boring. Inherits the **principal-grade standard**: frame the problem first, weigh options, outcomes over output. **Read the codebase before proposing** — match how it already works.
 
-Runs after `/start-task`, before `/implementation-plan`, before `/create-report`. Work in chat; nothing posts until approved.
+Runs after `/start-task` (+ `/prd` if present), before `/implementation-plan`, before `/create-report`. Work in chat; nothing posts until approved.
 
 ## Inputs
-The requirement (`get_task`) and the **codebase** — read the relevant code, existing patterns, and constraints first. Don't design in a vacuum.
+The requirement (`get_task` / `/prd`) and the **codebase** — read the relevant code, existing patterns, and constraints first. Don't design in a vacuum.
 
 ## Method (in order)
 1. **Problem & requirements.** What must be true when done, including non-functional needs (performance, security, scale).

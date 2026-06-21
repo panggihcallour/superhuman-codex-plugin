@@ -13,13 +13,13 @@ Design WORK — a QA gate on Figma work, before **`/create-report`**. Requires t
 
 ## Inputs
 
-The Figma file under review. Use the current Figma MCP tools for the file type: `get_metadata` for structure, `get_design_context` for component/screen details, `get_variable_defs` for variables, `search_design_system` for reusable assets, and `get_screenshot` for visual verification. For any write/fix pass, first follow the `figma-use` prerequisite, then use `use_figma`.
+The Figma file under review. Start with `figma_get_status` / `figma_list_open_files`, then drive the audit with `figma_audit_design_system`, `figma_lint_design`, `figma_get_file_data`, `figma_get_styles`, and component inspection tools. Re-`figma_search_components` for fresh node IDs.
 
 ## Method (in order)
 
 1. **Auto layout.** Find frames/components built with absolute positioning where auto layout belongs; flag "hug" where "fill" is needed (lopsided/non-responsive layouts), inconsistent padding/gap, and stacks that won't reflow.
 2. **Layer naming.** Flag default names ("Frame 12", "Group 34", "Rectangle 5"), inconsistent casing, and structure that's unnavigable. Propose a naming convention and the renames.
-3. **Design-system adherence.** Inspect with `get_design_context`, `get_variable_defs`, and `search_design_system`: detached instances that should be components, raw colors/text off the token/style set, off-scale spacing/radius, and components that drifted from the library.
+3. **Design-system adherence.** Run `figma_audit_design_system` / `figma_lint_design`: detached instances that should be components, raw colors/text off the token/style set, off-scale spacing/radius, and components that drifted from the library.
 4. **Quantify.** A small scorecard (e.g. % auto-layout, # unnamed layers, # detached instances, # off-token values) so progress is measurable.
 5. **Fix list.** Concrete, prioritised remediations — and offer to apply the safe, mechanical ones (renames, re-link to components) via the MCP on request.
 

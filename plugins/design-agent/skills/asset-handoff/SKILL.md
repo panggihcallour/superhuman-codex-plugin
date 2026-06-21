@@ -15,10 +15,6 @@ Design WORK — runs last in graphic work, before `/create-report`. Inherits the
 
 The final assets — logo system (`/logo-design`), identity (`/brand-identity`), and any collateral (`/marketing-assets`). Know the destinations (web, app, print) — they decide formats + color spaces.
 
-## Codex-only image generation
-
-Do not use `imagegen` to invent new assets during handoff. Handoff packages already-approved assets. If a required bitmap is missing, go back to the producing skill (`/brand-identity` or `/marketing-assets`) and use the Codex `imagegen` workflow there, then return here to package/export it.
-
 ## Method (in order)
 
 1. **Map destinations → formats.** Web/app: **SVG** (vector) + **PNG** (raster, @1x/@2x/@3x, transparent). Print: **PDF/EPS** vector, **CMYK/Pantone**. Favicon/app-icon sizes as needed.
