@@ -8,15 +8,13 @@ description: The daily entry point for working a Superhuman Operations task. Rea
 The single entry point for **Superhuman Agent** — an umbrella of senior specialists that work your Superhuman Operations tasks. It reads a task, identifies which specialist it needs, **adopts that persona**, then either hands you the wheel or conducts the whole process. **Understand first, then choose the depth.**
 
 **The specialists:**
-- **Product Agent** — Senior Product Manager. The *what & why*: problem framing, PRDs & specs, user stories + acceptance criteria, prioritisation, roadmap, success metrics, scope decisions. *(live)*
 - **Design Agent** — Senior Principal UX Designer. The *how it works & feels*: IA, sitemaps, flows, wireframes, visual design, design systems, prototyping, design QA. *(live — the pipeline in Part 3)*
 - **Graphic Agent** — Senior Brand & Graphic Designer. Concept before craft: brand strategy → moodboard → logo → identity system → marketing assets → brand book → handoff, with graphic critique. *(live)*
 - **Dev Agent** — Senior Software Engineer. Turning designs/specs into shipped code, review, refactors, tests. *(live)*
-- **Research Agent** — Senior UX & Market Researcher. User & market research, synthesis, usability, opportunity framing — evidence the others build on. *(live)*
 
-**All five specialists have full skill pipelines built.** Identify the specialist from the task, adopt that persona, and conduct their pipeline (Part 3).
+**All three specialists have full skill pipelines built.** Identify the specialist from the task, adopt that persona, and conduct their pipeline (Part 3).
 
-**Agent slug mapping for Operations MCP writes:** Product Agent → `strategic`; Design Agent → `des`; Graphic Agent → `graphic`; Dev Agent → `developer`; Research Agent → `research`.
+**Agent slug mapping for Operations MCP writes:** Design Agent → `des`; Graphic Agent → `graphic`; Dev Agent → `developer`.
 
 ## How every specialist operates (principal-grade)
 
@@ -54,11 +52,9 @@ After the kickoff, offer the choice:
 
 ## Part 3 — The conductor (only if they chose to continue)
 
-*(Below is the **Design** pipeline. Pick the pipeline for the task's specialist — all live, all end at `/create-report`, all fan out independent phases to sub-agents:*
+Pick the pipeline for the task's specialist — all live, all end at `/create-report`, and independent phases can fan out to sub-agents when available:
 - ***Graphic** — `brand-strategy` → `moodboard` → `logo-design` → `brand-identity` → `marketing-assets` → `brand-guidelines` → `asset-handoff`, QA `graphic-critique`.*
-- ***Product** — `product-brief` → `pr-faq` → `product-discovery` → `prd` → `prioritization` → `roadmap`, QA `product-critique`.*
 - ***Dev** — `tech-spec` → `implementation-plan` → `implement` → `test-plan`, QA `code-review` / `refactor` / `debug`.*
-- ***Research** — `research-plan` → fieldwork (`market-analysis` / `user-interview` / `survey` / `usability-eval`, fan out) → `synthesis` → `insights-report`.)*
 
 **Propose a phase plan first.** Not every task needs every skill — a logo/brand task ≠ a web-app feature ≠ a mid-project "Phase 4". Pick the ordered subset this task actually needs, say what you're **skipping and why**, and get approval before running anything.
 

@@ -38,6 +38,23 @@ GRAPHIC_SKILLS=(
   graphic-critique
 )
 
+REMOVED_SKILLS=(
+  product-brief
+  pr-faq
+  product-discovery
+  prd
+  prioritization
+  roadmap
+  product-critique
+  research-plan
+  market-analysis
+  user-interview
+  survey
+  usability-eval
+  synthesis
+  insights-report
+)
+
 for skill in "${GRAPHIC_SKILLS[@]}"; do
   skill_file="$PLUGIN_DIR/skills/$skill/SKILL.md"
   if ! rg -q '^## Codex-only image generation$' "$skill_file"; then
@@ -45,5 +62,18 @@ for skill in "${GRAPHIC_SKILLS[@]}"; do
     exit 1
   fi
 done
+
+for skill in "${REMOVED_SKILLS[@]}"; do
+  if [[ -e "$PLUGIN_DIR/skills/$skill" ]]; then
+    echo "error: removed Product/Research skill still exists: $PLUGIN_DIR/skills/$skill" >&2
+    exit 1
+  fi
+done
+
+if rg -n 'Product Agent|Research Agent|product-brief|pr-faq|product-discovery|/prd|`prd`|prioritization|roadmap|product-critique|research-plan|market-analysis|user-interview|/survey|`survey`|usability-eval|/synthesis|`synthesis`|insights-report' "$PLUGIN_DIR" "$ROOT_DIR/README.md" >"$TMP_FILE"; then
+  echo "error: found stale Product/Research agent instructions:" >&2
+  cat "$TMP_FILE" >&2
+  exit 1
+fi
 
 echo "OK"

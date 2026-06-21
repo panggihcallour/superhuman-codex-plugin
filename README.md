@@ -1,8 +1,9 @@
 # Superhuman Agent — Codex plugin
 
 **Superhuman Agent** connects Codex to the **Superhuman Operations** MCP (tasks, projects,
-workload, documents) and brings a roster of **senior specialist agents** to work those tasks —
-all in one install. `start-task` reads a task, picks the right specialist, and runs the work.
+workload, documents) and brings a focused roster of **senior specialist agents** to work those
+tasks — all in one install. `start-task` reads a task, picks the right specialist, and runs the
+work.
 
 > **Operational surface only.** This connects to the Operations MCP — tasks, projects,
 > workload, documents. It exposes **no finance, sales, or people data / money** (the token is
@@ -13,11 +14,9 @@ all in one install. `start-task` reads a task, picks the right specialist, and r
 
 | Agent | Persona | Specialises in | Status |
 |---|---|---|---|
-| **Product Agent** | Senior Product Manager | the what & why — problem framing, PRDs/specs, user stories & acceptance criteria, prioritisation, roadmap, success metrics, scope | **live** (7 skills) |
 | **Design Agent** | Senior Principal UX Designer | how it works & feels — IA, sitemaps, flows, wireframes, visual design, design systems, prototyping, design QA | **live** (18 skills) |
 | **Graphic Agent** | Senior Brand & Graphic Designer | brand & graphic — strategy, moodboard, logo, identity system, marketing assets, brand book, handoff, critique | **live** (8 skills) |
 | **Dev Agent** | Senior Software Engineer | shipping code — implementation, review, refactors, tests, debugging | **live** (7 skills) |
-| **Research Agent** | Senior UX & Market Researcher | evidence — user/market research, synthesis, usability, opportunity framing | **live** (7 skills) |
 
 Shared by every agent: **`start-task`** (the conductor — understand a task, then do it yourself or
 run the full pipeline) and **`create-report`** (report the **process + outcome** back on the task — what was explored, the decisions, then the deliverable). Each agent
@@ -38,20 +37,10 @@ works at a senior, principal level in its craft.
 - **Document & handoff** — `brand-guidelines` · `asset-handoff`
 - **QA** — `graphic-critique`
 
-**Product Agent skills (live):**
-- **Frame & discover** — `product-brief` · `pr-faq` · `product-discovery`
-- **Define & plan** — `prd` · `prioritization` · `roadmap`
-- **QA** — `product-critique`
-
 **Dev Agent skills (live):**
 - **Design & plan** — `tech-spec` · `implementation-plan`
 - **Build** — `implement` · `test-plan`
 - **Review & maintain** — `code-review` · `refactor` · `debug`
-
-**Research Agent skills (live):**
-- **Plan** — `research-plan` · `market-analysis`
-- **Fieldwork** — `user-interview` · `survey` · `usability-eval`
-- **Synthesise** — `synthesis` · `insights-report`
 
 ## Install
 
@@ -111,7 +100,7 @@ It validates the plugin JSON files and fails if stale instructions leak back in,
 ## Use
 
 In a Codex chat:
-- `/start-task` — paste a task link; it reads the task, moves it to in-progress, and kicks off, then either hands you the wheel or runs the full process.
+- `/start-task` — paste a task link; it reads and claims the task, kicks off, then either hands you the wheel or runs the full process.
 - `/create-report` — when done, it reports the **process + outcome** (what it explored, the decisions, then the deliverable) and posts it to the task (after you approve).
 
 Verify it's connected: paste a task link and ask Codex to `get_task <link>` — it should return
