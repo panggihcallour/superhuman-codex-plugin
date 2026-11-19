@@ -2,8 +2,7 @@
   "mcpServers": {
     "superhuman_operations": {
       "type": "http",
-      "url": "https://superhuman.callourstudio.com/api/mcp/mcp",
-      "bearer_token_env_var": "SUPERHUMAN_MCP_TOKEN"
+      "url": "https://superhuman.callourstudio.com/api/mcp/mcp"
     }
   }
 }

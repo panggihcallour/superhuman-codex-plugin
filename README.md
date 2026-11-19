@@ -6,8 +6,8 @@ tasks — all in one install. `start-task` reads a task, picks the right special
 work.
 
 > **Operational surface only.** This connects to the Operations MCP — tasks, projects,
-> workload, documents. It exposes **no finance, sales, or people data / money** (the token is
-> audience-scoped to Operations). The MCP endpoint requires a valid token; without one it
+> workload, documents. It exposes **no finance, sales, or people data / money**. You sign in with
+> your own Ops account (OAuth) and get the tools your role has in the app; without signing in it
 > returns nothing.
 
 ## The agents
@@ -44,7 +44,7 @@ works at a senior, principal level in its craft.
 
 ## Install
 
-You need a **Superhuman MCP token** — ask the founder (minted at `/account/mcp`).
+You need an active Ops account (founder, PM, designer or developer). No token: you sign in.
 
 ### From the Codex app
 1. **Plugins → Add marketplace.**
@@ -52,7 +52,7 @@ You need a **Superhuman MCP token** — ask the founder (minted at `/account/mcp
    - Git ref: `main`
    - Sparse paths: `.agents/plugins`
 2. Find **Superhuman Agent** in the plugin list → **Add**.
-3. Set your token (below).
+3. Sign in (below).
 4. **Restart Codex.**
 
 ### From the CLI
@@ -60,25 +60,19 @@ You need a **Superhuman MCP token** — ask the founder (minted at `/account/mcp
 codex plugin marketplace add panggihcallour/superhuman-codex-plugin
 codex plugin add superhuman-agent@callour
 ```
-Then set your token and restart Codex.
+Then sign in (below) and restart Codex.
 
-## Set your token
-
-**First, get a token — ask the founder.** Callour Studio mints it at `/account/mcp` (the token
-page is founder-only). The plugin reads it from `SUPERHUMAN_MCP_TOKEN`, which Codex loads from
-`~/.codex/.env`. Open that file in a text editor:
+## Sign in
 
 ```
-touch ~/.codex/.env && open -e ~/.codex/.env
+codex mcp login superhuman_operations
 ```
 
-TextEdit opens — add this line (replace `shmcp_xxxx` with your token), then save (`Cmd+S`):
+The browser opens: sign in to Ops if asked, then **Allow**. Codex keeps the sign-in and refreshes it
+itself. Then **restart Codex**.
 
-```
-SUPERHUMAN_MCP_TOKEN=shmcp_xxxx
-```
-
-If a `SUPERHUMAN_MCP_TOKEN` line already exists, replace it (don't duplicate). Then **restart Codex**.
+> **Upgrading from 0.11 or older?** Old `shmcp_` tokens no longer work. Remove the
+> `SUPERHUMAN_MCP_TOKEN` line from `~/.codex/.env`, then sign in as above.
 
 ## Update
 
